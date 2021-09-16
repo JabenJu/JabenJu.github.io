@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Are You Smarter than Six College Students?</title>
+        <link rel="stylesheet" href="QuizSiteRedo.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="background, background2"></div>
+        <div class="background, background3"></div>
+
+        <h1><p>Are You Smarter than Six College Students?</p></h1>
+        <div id="quizContainer">
+            <div id="question">
+                <p>Placeholder</p><br><br>
+            </div>
+            <div id="answerForm">
+                <form onsubmit="return false"><!-- Added onsubmit line -->
+                    <input type="radio" id="a" class="radioInput" name="ans"><!-- Changed Radio Button id's on all-->
+                        <label id="answer_1" for="a">A: Placeholder</label><br><br> <!-- Added Label id's to all-->
+            
+                    <input type="radio" id="b" class="radioInput" name="ans">
+                        <label id="answer_2" for="b">B: Placeholder</label><br><br>
+            
+                    <input type="radio" id="c" class="radioInput" name="ans">
+                        <label id="answer_3" for="c">C: Placeholder</label><br><br>
+            
+                    <input type="radio" id="d" class="radioInput" name="ans">
+                        <label id="answer_4" for="d">D: Placeholder</label><br><br><br>
+                    <button id="submit">Submit</button><!-- Added Submit Button -->
+                </form>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h3 id="scoreCount">Score:</h3>
+            <h4 id="score">0/0</h3>
+
+            <h3 id="result">Correct!</h3>
+            
+            <h3 id="questionCount">Questions Remaining:</h3>
+            <h4 id="remaining">10</h3>
+        </div>
+        <script src="QuizSite.js"></script><!-- Added Script-->
+    </body>
+</html>
+
