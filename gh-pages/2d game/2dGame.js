@@ -58,8 +58,8 @@ function placeCharacter() {
     //sets limits to simulate walls
     var leftLimit = -8;
     var rightLimit = (16 * 11)+8;
-    var topLimit = -8 + 32;
-    var bottomLimit = (16 * 7);
+    var topLimit = -8;
+    var bottomLimit = (16 * 7)+12;
 
     //if the character reaches a wall, stop them from going further
     if (x < leftLimit) { x = leftLimit; }
