@@ -116,3 +116,13 @@ body {
         transform: translate3d(-100%,0%,0);
     }
 }
+
+
+#shamelessSelfPromotion a {
+    font-size: x-small;
+    font-family: 'Press Start 2P';
+    animation: neon 1.5s ease-in-out infinite alternate;
+    margin-top: 80px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
