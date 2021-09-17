@@ -1,0 +1,118 @@
+/*set sizing in root*/
+:root {
+    --pixel-size: 2px;
+    --grid-cell: calc( var(--pixel-size)*16);
+}
+
+/*change sizing based on screen width*/
+@media(min-width: 700px) {
+    :root {
+        --pixel-size: 3px;
+    }
+}
+
+@media(min-width: 900px) {
+    :root {
+        --pixel-size: 4px;
+    }
+}
+
+html {
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pixel-art {
+    image-rendering: pixelated;
+}
+
+.camera {
+    /* set width of camera box to 160pixels wide */
+    width: calc( var(--pixel-size)*160);
+    /* set height of camera box to 144pixels wide */
+    height: calc( var(--pixel-size)*144);
+    /* allow for moving map */
+    overflow: hidden;
+    background-color: #85e4f7;
+    position: relative;
+}
+
+.map {
+    image-rendering: pixelated;
+    /* make the map your image, scale it up pixel by pixel to fill the map div */
+    background-image: url(02aa0790086f91a.png);
+    border: black 1px;
+    background-size: 100%;
+    /* set map height and weight to a set number of grid blocks (could use solely pixels if you wanted) */
+    width: calc(13*var(--grid-cell));
+    height: calc(10*var(--grid-cell));
+    position: relative;
+}
+
+.character {
+    /* set character height and width */
+    width: calc( var(--grid-cell)*2);
+    height: calc( var(--grid-cell)*2);
+    position: absolute;
+    overflow: hidden;
+}
+
+.characterSprite {
+    position: absolute;
+    background: url(gZ3c5.png);
+    background-size: 100%;
+    width: calc( var(--grid-cell)*8);
+    height: calc( var(--grid-cell)*8);
+}
+
+.characterShadow {
+    width: calc( var(--grid-cell)*2);
+    height: calc( var(--grid-cell)*2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url();
+    background-size: 100%;
+}
+
+.character[facing="right"] .characterSprite {
+    top: -200%;
+}
+.character[facing="up"] .characterSprite {
+    top: -300%;
+}
+.character[facing="left"] .characterSprite {
+    top: -100%;
+}
+
+.character[walking="true"] .characterSprite {
+    animation: walk 0.6s steps(4) infinite;
+}
+
+@keyframes walk {
+    from {
+        transform: translate3d(0%,0%,0);
+    }
+    to {
+        transform: translate3d(-100%,0%,0);
+    }
+}
