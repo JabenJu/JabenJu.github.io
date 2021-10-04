@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+::-webkit-scrollbar { 
+    display: none;  /* Chrome Safari */
+}
+
+/* 
+background: 
+main1: #14a098
+main2: #cb2d6f
+dark: #501f3a
+light: #cccccc
+light2: #d1d7e0
+*/
+
+/* General */
+body {
+    background-color: #0f292f;
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+h1 {
+    color: #cb2d6f;
+}
+
+p {
+    color: #cccccc;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.about, .experience, .work, .contact {
+    padding: 20vh 20vh;
+}
+
+
+/* Sidebar */
+.right {
+    position: fixed;
+    right: 3vh;
+    bottom: 4vh;
+    font-size: 1vh;
+    text-align: center;
+}
+
+.right ul {
+    list-style: none;
+}
+.right li {
+    padding-top: 8px;
+}
+
+.right hr {
+    margin-left: 18px;
+    border-color: #cccccc;
+}
+
+.right i {
+    color: #cb2d6f;
+    -webkit-transition: all ease 0.8s 0.1s;
+	-moz-transition: all ease 0.8s 0.1s;
+	transition: all ease 0.8s 0.1s;
+}
+
+.right i:hover {
+    color: #14a098;
+}
+
+/* Navbar */
+.top {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+    position: fixed;
+    right: 0px;
+    top: 5px;
+}
+
+.top ul li {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+a.topbutton {
+    position: relative;
+    text-decoration: none;
+    color: #14a098;
+    z-index: 1;
+}
+  
+a.topbutton::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: .07em;
+    height: .1em;
+    width: 100%;
+
+    background-color: #14a098;
+    z-index: -1;
+    transition: height .25s cubic-bezier(.7,0,.5,1);
+}
+  
+a.topbutton:hover::after {
+    height: .2em;
+}
+
+a.topbutton2 {
+    border: 2px #cb2d6f solid;
+    padding: 4px 5px;
+    color: #cb2d6f;
+    text-decoration: none;
+}
+
+a.topbutton2 {
+    -webkit-transition: all ease 0.8s 0.1s;
+	-moz-transition: all ease 0.8s 0.1s;
+	transition: all ease 0.8s 0.1s;
+
+    background-color: rgba(0,0,0,0,);
+
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+a.topbutton2:hover {  
+    background-color: #cb2d6f;
+    color: #cccccc;
+}
+
+/* Title page */
+.front {
+    padding-top: 25vh;
+    padding-left: 180px;
+    width: 70%;
+}
+
+.front h1 {
+    font-size: 15vh;
+    text-indent: 5vh;
+    padding: 10px 0px;
+}
+
+
+/* About page */
+.aboutWrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.content1 {
+    width: 50%;
+    height: auto;
+}
+
+.about .side1 {
+    width: 40%;
+    height: auto;
+    margin-right: 100px;
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+}
+
+.side1 hr {
+    border-color: #cccccc;
+}
+
+.side1 ul {
+    list-style-type: none;
+    color: #cccccc;
+    
+}
+
+/* Experience page */
+
+.content2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 3%;
+}
+
+.content2 h3 {
+    color: #cb2d6f;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    width: 31%;
+}
+
+.card-icon {
+    display: inline-block;
+    color: #14a098;
+    margin-right: 10px;
+    padding-top: 2px;
+}
+
+.card p {
+    line-height: 120%;
+    padding-bottom: 2px;
+}
+
+/* Work page */
+.content3 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 40% 40% 40% 40%;
+    grid-row-gap: 6%;
+    grid-column-gap: 1%;
+}
+
+.grid-item {
+    text-align: center;
+    background-color: #cb2d6f;
+    color: #cccccc;
+    -webkit-transition: all ease 0.8s 0.1s;
+	-moz-transition: all ease 0.8s 0.1s;
+	transition: all ease 0.8s 0.1s;
+}
+
+.grid-item p {
+    margin-top: 5vh;
+}
+
+.grid-item:hover {
+    background-color: #14a098;
+    color: #501f3a;
+}
+
+.contact-button {
+    margin-top: 15vh;
+    margin-left: 20vh;
+}
+
+.hover-img {
+    display: none;
+}
+
+/* Contact page */
+
+
+/* Media */
+@media screen and (max-height: 700px) {
+    .right {
+        display: none;
+    }
+}
