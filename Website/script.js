@@ -42,5 +42,7 @@ for(x=0; x <= grid_items.length; x++) {
     grid_items[x].id = x;
 };
 
-
+// 
+// 
+// 
 

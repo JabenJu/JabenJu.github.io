@@ -85,15 +85,21 @@ p {
 }
 
 /* Navbar */
+header {
+    width: 100%;
+    height: 50px;
+}
+
 .top {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     margin-right: 15px;
-    margin-top: 15px;
+    padding-top: 15px;
     position: fixed;
     right: 0px;
-    top: 5px;
+    top: 0px;
+    background-color: #0f292f;
 }
 
 .top ul li {
@@ -274,7 +280,79 @@ a.topbutton2:hover {
 }
 
 /* Contact page */
+.content4 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
 
+.profile {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    display: inline-block;
+    float: left;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #0f292f;
+    margin-right: 3vh;
+    background-color: #cccccc;
+}
+
+.profile-item {
+    padding: 3vh;
+    width: 90%;
+}
+
+.profile ion-icon {
+    color: #14a098;
+    font-size: 180%;
+    padding-right: 10px;
+}
+
+.profile-item1 {
+    background-color: #cb2d6f;
+    border-radius: 6px 6px 0px 0px;
+    border-bottom: 3px solid #0f292f;
+}
+
+.profile-item1 p {
+    margin-top: 1vh;
+}
+
+.profile-item2 {
+    background-color: #501f3a;
+    border-bottom: 3px solid #0f292f;
+    color: #cccccc;
+    
+}
+
+.profile-item3 {
+    background-color: #501f3a;
+    border-bottom: 3px solid #0f292f;
+    color: #cccccc;
+    
+}
+
+.profile-item4 {
+    background-color: #501f3a;
+    border-radius: 0px 0px 6px 6px;
+    color: #cccccc;
+}
+
+.profile-item2 p, .profile-item3 p, .profile-item4 p {
+    display: inline-flex;
+    align-items: center;
+}
 
 /* Media */
 @media screen and (max-height: 700px) {
