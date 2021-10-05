@@ -246,9 +246,11 @@ a.topbutton2:hover {
     text-align: center;
     background-color: #cb2d6f;
     color: #cccccc;
-    -webkit-transition: all ease 0.8s 0.1s;
+    border: 1px rgba(0, 0, 0, 0) solid;
+    border-radius: 6px;
+    /* -webkit-transition: all ease 0.8s 0.1s;
 	-moz-transition: all ease 0.8s 0.1s;
-	transition: all ease 0.8s 0.1s;
+	transition: all ease 0.8s 0.1s; */
 }
 
 .grid-item p {
@@ -267,6 +269,8 @@ a.topbutton2:hover {
 
 .hover-img {
     display: none;
+    position: fixed;
+    pointer-events: none;
 }
 
 /* Contact page */
